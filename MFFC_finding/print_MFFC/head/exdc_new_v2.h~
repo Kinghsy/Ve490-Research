@@ -1,0 +1,25 @@
+#ifndef EXDC_NEW_V2_H
+#define EXDC_NEW_V2_H
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <set>
+#include <map>
+#include <iostream>
+#include "../cudd/bnet.h"
+
+using namespace std; 
+
+void dc_real_er_v2(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, map<string, double> &dc_include);
+double exdc_real_er_v2(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, string &sexdc, int num_digit);
+void exdc_new_v2(BnetNetwork *net, DdManager **dd, char *cnode, vector<char*> &cutnodes, multimap<double, string> &exdc_set, double threshold, vector<string> &dont_care);
+
+void exdc_new_v3(BnetNetwork *net, DdManager **dd, char *cnode, vector<char*> &unsort_cutnodes, vector<string> &org_pla, multimap<double, string> &exdc_set, double threshold, vector<string> &dont_care, int iIndex);
+void exdc_new_min(BnetNetwork *net, DdManager **dd, char *cnode, multimap<double, string> &exdc_set, vector<string> &dont_care, vector<string> &org_pla);
+
+void exdc_new_v4(BnetNetwork *net, DdManager **dd, char *cnode, vector<char*> &unsort_cutnodes, vector<string> &org_pla, vector<string> &dont_care, vector<string> &local_dc_set, multimap<double, string> &exdc_set, double threshold);
+#endif

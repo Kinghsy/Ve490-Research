@@ -1,0 +1,18 @@
+**#2-input LUTs: 6
+**node: n143
+.model bigNode
+.inputs 56 66 n83 n85 329 
+.outputs n143
+.names n85 329 n138
+00 1
+.names n85 329 n139
+11 1
+.names n138 n139 n140
+00 1
+.names 56 66 n141
+10 1
+.names n83 n141 n142
+01 1
+.names n140 n142 n143
+01 1
+.end

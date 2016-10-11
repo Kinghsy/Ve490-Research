@@ -1,0 +1,38 @@
+#ifndef HELPER_H
+#define HELPER_H
+#include <vector>
+#include <set>
+#include <iostream>
+#include "graph.h"
+#include "node.h"
+#include "edge.h"
+#include "HashTable.h"
+#include "../cudd/bnet.h"
+
+using namespace std;
+
+
+void find_tranfanout(BnetNetwork *net, BnetNode *cnode, set<char*> &tfo);
+void int2bin(int d, vector<int> &bin, int numBit);
+string int2grey(int indexHor, int nVarsHor);
+int call_vcs();
+double comp_each_real_er(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, vector<string> &input_nodes, vector<string> &ori_pla_v0);
+double exdc_minterm(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, set<string> &diff_pla);
+void exp_cube(vector<string> &new_pla, string &s);
+void build_ddnode_cube(BnetNetwork *net, DdManager **dd, DdNode *prod, vector<char*> &cutnodes,  string &sexdc);
+void build_ddnode_sop(BnetNetwork *net, DdManager **dd, DdNode **func, vector<char*> &cutnodes, vector<string> &exdc_set);
+
+void image_computation(BnetNetwork *net, DdManager **dd, DdNode *global_care, char *cnode, vector<string> &local_dc_set);
+void image_computation_recur(DdManager **dd, DdNode **array_funcs, int &num_var, vector<int> &index_set, vector<map<int, int> >&lit_cubes);
+void complement_cover(set<string> &local_care_set, vector<string> &local_dc_set, int num_input);
+
+double sim_pick(BnetNetwork *net, char *cnode, vector<char*> &cutnodes, multimap<double, string> &exdc_set, multimap<double, string> &exdc_record, int iIndex);
+
+bool isInclude(string &dc_sim, string &dc_org);
+bool isIncludeVec(vector<string> &dc_set, string &dc);
+bool isIncludeSet(set<string> &dc_set, string &dc);
+int factorial(int x);
+int search_in_vec(vector<string> &org_pla, string str);
+
+
+#endif

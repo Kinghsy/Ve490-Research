@@ -1,0 +1,13 @@
+source abc.rc
+read_truth -x 00111100010111101001011111110000     
+read_library mcnc.genlib
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test10_result.v
+write_bench test10_result.bench

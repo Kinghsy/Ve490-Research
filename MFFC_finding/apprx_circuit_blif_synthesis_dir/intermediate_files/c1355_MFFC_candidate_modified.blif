@@ -1,0 +1,13 @@
+.model bigNode
+.inputs 141 148 155 162 
+.outputs n110
+.names 162 155 n99
+00 1
+11 1
+.names 148 n99 n100
+10 1
+01 1
+.names 141 n100 n110
+10 1
+01 1
+.end

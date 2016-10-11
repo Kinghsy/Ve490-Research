@@ -1,0 +1,1 @@
+perl new_apprx_ckt_synthesizer.pl apprx_circuit_matlab.blif c880_MFFC_candidate.blif c880_MFFC_candidate_modified.blif

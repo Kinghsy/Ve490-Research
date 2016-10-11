@@ -1,0 +1,9 @@
+source abc.rc
+read_library mcnc.genlib
+
+read_truth -x 10100111010111110000110011011100    
+resyn
+resyn
+if -K 2
+show
+write_bench test.bench

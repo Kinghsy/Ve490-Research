@@ -1,0 +1,4 @@
+#! /usr/bin/perl
+
+system("rm ./output_dir/*");
+system("perl testbench_verilog_generator.pl 11 1 1000");

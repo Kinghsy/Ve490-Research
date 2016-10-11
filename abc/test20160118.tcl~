@@ -1,0 +1,7 @@
+source abc.rc
+read_library mcnc.genlib
+ 
+read_blif ./test_dir_20160118/benchmarks/bm1.blif   
+collapse
+write_pla ./test_dir_20160118/results/bm1_pla.txt
+

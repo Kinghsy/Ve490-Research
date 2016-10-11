@@ -1,0 +1,7 @@
+read_truth -x 0010
+strash
+rewrite
+write_verilog output0.v
+write_bench -l output0.bench
+
+

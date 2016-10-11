@@ -1,0 +1,48 @@
+#ifndef BTREE_H
+#define BTREE_H
+
+#include <iostream>
+
+using namespace std;  
+
+
+/*struct treeNode
+{
+	int op;          //0: multiply, 1: add
+	string name;     //if a leaf node, represents its name
+	treeNode *left;
+	treeNode *right;
+};
+*/
+
+struct btNode{
+   // store operator or operand
+   string data;
+   // only valid for operator
+   int precedence;
+   //number of product term at each node
+   int numPT; 
+   //index of leaf node
+   int ind;
+   //expressions at this node
+   vector<string> exp;
+   struct btNode* parent;
+   struct btNode* left;
+   struct btNode* right;
+};
+
+btNode * CreateInfixTree(const string& exp);
+void PostOrderPrintTree(btNode * node);
+void InOrderPrintTree(btNode * node);
+void compNumPT(btNode **node, int &num);
+
+void visitleaf(btNode *root, map<int, btNode*> &leaf_set, int &ind);
+void compInvCubeNum(btNode *root, btNode *leaf, int &num_cube);
+
+void InOrderPrintExp(btNode * node);
+void comp_exp(btNode **root);
+void get_involve_cubes(btNode *root, btNode *leaf, vector<string> &inv_cubes);
+
+void printVec(vector<string> &cubes);
+
+#endif

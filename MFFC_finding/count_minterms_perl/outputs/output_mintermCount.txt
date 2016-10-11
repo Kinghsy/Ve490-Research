@@ -1,0 +1,3 @@
+total possible minterm count = 32
+minterm count = 2
+error rate = 0.0625

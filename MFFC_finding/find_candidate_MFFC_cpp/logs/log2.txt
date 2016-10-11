@@ -1,0 +1,1352 @@
+
+**************************************************************
+Read the Boolean network: 
+****************************
+step1. topSort: 
+1 8 13 17 26 29 36 42 51 55 59 68 72 73 74 75 80 85 86 87 88 89 90 91 96 101 106 111 116 121 126 130 135 138 143 146 149 152 153 156 159 165 171 177 183 189 195 201 207 210 219 228 237 246 255 259 260 261 267 268 n93 n96 n89 n186 n187 n102 n170 n110 n112 n87 n100 391 n105 n116 n117 n119 n120 n128 n129 n131 n132 n299 n312 n319 n327 n181 n143 n144 n146 n147 n155 n156 n158 n159 n202 n224 n262 n284 n350 n380 n400 n259 n281 n176 n365 n94 n192 n97 447 389 390 n188 421 422 n171 n113 388 n177 420 n194 423 450 n118 n121 n130 n133 n145 n148 n157 n160 418 n109 n193 n98 n182 n304 n189 n172 n178 n122 n123 n134 n135 n149 n150 n161 n162 448 449 n195 419 446 n183 n302 n305 n190 n173 n179 n124 n136 n151 n163 n184 n303 n315 n322 n330 n306 n191 n174 n180 n125 n126 n137 n138 n152 n153 n164 n165 n185 n217 n228 n233 n307 n316 n323 n331 n196 n175 n222 n258 n280 n348 n363 n378 n398 n127 n139 n154 n166 n197 n218 n229 n234 n300 n313 n320 n328 n140 n141 n167 n168 n198 n219 n230 n235 n301 n314 n321 n329 767 768 n199 n220 n231 n236 n308 n317 n324 n332 n200 n203 n204 n221 n225 n226 n232 n242 n260 n237 n243 n282 n309 n344 n362 n318 n338 n377 n325 n339 n397 n333 n336 n347 n201 n286 n205 n212 n223 n227 n254 n263 n275 n261 n238 n264 n266 n244 n285 n294 n283 n373 n366 n364 n381 n393 n379 n326 n340 n401 n410 n399 n382 n351 n358 n384 n349 n287 n206 n207 n211 n253 n274 n239 n241 n265 n267 n245 n293 n372 n392 n334 n337 n341 n409 n357 n385 n288 n289 n208 n213 n255 n276 n240 n268 n246 n295 n374 n394 n342 n411 n359 n290 n209 n269 n270 n247 n291 n210 n271 n248 n249 n310 n292 n214 n272 n250 n311 n296 n215 n273 n251 n335 n352 n353 n383 n402 n297 850 n277 n252 n343 n354 n386 n403 865 n278 n256 n345 n367 n368 n355 n387 n388 n404 n405 864 863 866 n369 n356 n389 n406 n370 n360 n390 n407 n371 874 n391 n408 n375 n395 n412 878 879 880 
+****************************
+step2. get_MFFC & find_insig_MFFC: 
+
+cnode: 1
+cMFFC: 1 
+
+cnode: 8
+cMFFC: 8 
+
+cnode: 13
+cMFFC: 13 
+
+cnode: 17
+cMFFC: 17 
+
+cnode: 26
+cMFFC: 26 
+
+cnode: 29
+cMFFC: 29 
+
+cnode: 36
+cMFFC: 36 
+
+cnode: 42
+cMFFC: 42 
+
+cnode: 51
+cMFFC: 51 
+
+cnode: 55
+cMFFC: 55 
+
+cnode: 59
+cMFFC: 59 
+
+cnode: 68
+cMFFC: 68 
+
+cnode: 72
+cMFFC: 72 
+
+cnode: 73
+cMFFC: 73 
+
+cnode: 74
+cMFFC: 74 
+
+cnode: 75
+cMFFC: 75 
+
+cnode: 80
+cMFFC: 80 
+
+cnode: 85
+cMFFC: 85 
+
+cnode: 86
+cMFFC: 86 
+
+cnode: 87
+cMFFC: 87 
+
+cnode: 88
+cMFFC: 88 
+
+cnode: 89
+cMFFC: 89 
+
+cnode: 90
+cMFFC: 90 
+
+cnode: 91
+cMFFC: 91 
+
+cnode: 96
+cMFFC: 96 
+
+cnode: 101
+cMFFC: 101 
+
+cnode: 106
+cMFFC: 106 
+
+cnode: 111
+cMFFC: 111 
+
+cnode: 116
+cMFFC: 116 
+
+cnode: 121
+cMFFC: 121 
+
+cnode: 126
+cMFFC: 126 
+
+cnode: 130
+cMFFC: 130 
+
+cnode: 135
+cMFFC: 135 
+
+cnode: 138
+cMFFC: 138 
+
+cnode: 143
+cMFFC: 143 
+
+cnode: 146
+cMFFC: 146 
+
+cnode: 149
+cMFFC: 149 
+
+cnode: 152
+cMFFC: 152 
+
+cnode: 153
+cMFFC: 153 
+
+cnode: 156
+cMFFC: 156 
+
+cnode: 159
+cMFFC: 159 
+
+cnode: 165
+cMFFC: 165 
+
+cnode: 171
+cMFFC: 171 
+
+cnode: 177
+cMFFC: 177 
+
+cnode: 183
+cMFFC: 183 
+
+cnode: 189
+cMFFC: 189 
+
+cnode: 195
+cMFFC: 195 
+
+cnode: 201
+cMFFC: 201 
+
+cnode: 207
+cMFFC: 207 
+
+cnode: 210
+cMFFC: 210 
+
+cnode: 219
+cMFFC: 219 
+
+cnode: 228
+cMFFC: 228 
+
+cnode: 237
+cMFFC: 237 
+
+cnode: 246
+cMFFC: 246 
+
+cnode: 255
+cMFFC: 255 
+
+cnode: 259
+cMFFC: 259 
+
+cnode: 260
+cMFFC: 260 
+
+cnode: 261
+cMFFC: 261 
+
+cnode: 267
+cMFFC: 267 
+
+cnode: 268
+cMFFC: 268 
+
+cnode: n87
+cMFFC: n87 
+
+cnode: n89
+cMFFC: n89 
+
+cnode: n93
+cMFFC: n93 
+
+cnode: n94
+cMFFC: n94 
+
+cnode: n96
+cMFFC: 26 n96 
+this insig: 
+1 26 
+
+cnode: n97
+cMFFC: n97 
+
+cnode: n98
+cMFFC: n97 n98 
+this insig: 
+13 17 n96 
+
+cnode: n100
+cMFFC: n100 
+
+cnode: n102
+cMFFC: n102 
+
+cnode: n105
+cMFFC: 87 88 n105 
+this insig: 
+87 88 
+
+cnode: n109
+cMFFC: n109 
+
+cnode: n110
+cMFFC: n110 
+
+cnode: n112
+cMFFC: n112 
+
+cnode: n113
+cMFFC: 74 n112 n113 
+this insig: 
+59 68 74 
+
+cnode: n116
+cMFFC: n116 
+
+cnode: n117
+cMFFC: n117 
+
+cnode: n118
+cMFFC: n116 n117 n118 
+this insig: 
+91 96 
+
+cnode: n119
+cMFFC: n119 
+
+cnode: n120
+cMFFC: n120 
+
+cnode: n121
+cMFFC: n119 n120 n121 
+this insig: 
+101 106 
+
+cnode: n122
+cMFFC: n122 
+
+cnode: n123
+cMFFC: n123 
+
+cnode: n124
+cMFFC: n116 n117 n118 n119 n120 n121 n122 n123 n124 
+this insig: 
+91 96 101 106 
+
+cnode: n125
+cMFFC: n125 
+
+cnode: n126
+cMFFC: n126 
+
+cnode: n127
+cMFFC: n116 n117 n118 n119 n120 n121 n122 n123 n124 n125 n126 n127 
+this insig: 
+91 96 101 106 130 
+
+cnode: n128
+cMFFC: n128 
+
+cnode: n129
+cMFFC: n129 
+
+cnode: n130
+cMFFC: n128 n129 n130 
+this insig: 
+111 116 
+
+cnode: n131
+cMFFC: n131 
+
+cnode: n132
+cMFFC: n132 
+
+cnode: n133
+cMFFC: n131 n132 n133 
+this insig: 
+121 126 
+
+cnode: n134
+cMFFC: n134 
+
+cnode: n135
+cMFFC: n135 
+
+cnode: n136
+cMFFC: n128 n129 n130 n131 n132 n133 n134 n135 n136 
+this insig: 
+111 116 121 126 
+
+cnode: n137
+cMFFC: n137 
+
+cnode: n138
+cMFFC: n138 
+
+cnode: n139
+cMFFC: 135 n128 n129 n130 n131 n132 n133 n134 n135 n136 n137 n138 n139 
+this insig: 
+111 116 121 126 135 
+
+cnode: n140
+cMFFC: n140 
+
+cnode: n141
+cMFFC: n141 
+
+cnode: n143
+cMFFC: n143 
+
+cnode: n144
+cMFFC: n144 
+
+cnode: n145
+cMFFC: n143 n144 n145 
+this insig: 
+159 165 
+
+cnode: n146
+cMFFC: n146 
+
+cnode: n147
+cMFFC: n147 
+
+cnode: n148
+cMFFC: n146 n147 n148 
+this insig: 
+171 177 
+
+cnode: n149
+cMFFC: n149 
+
+cnode: n150
+cMFFC: n150 
+
+cnode: n151
+cMFFC: n143 n144 n145 n146 n147 n148 n149 n150 n151 
+this insig: 
+159 165 171 177 
+
+cnode: n152
+cMFFC: n152 
+
+cnode: n153
+cMFFC: n153 
+
+cnode: n154
+cMFFC: n143 n144 n145 n146 n147 n148 n149 n150 n151 n152 n153 n154 
+this insig: 
+130 159 165 171 177 
+
+cnode: n155
+cMFFC: n155 
+
+cnode: n156
+cMFFC: n156 
+
+cnode: n157
+cMFFC: n155 n156 n157 
+this insig: 
+183 189 
+
+cnode: n158
+cMFFC: n158 
+
+cnode: n159
+cMFFC: n159 
+
+cnode: n160
+cMFFC: n158 n159 n160 
+this insig: 
+195 201 
+
+cnode: n161
+cMFFC: n161 
+
+cnode: n162
+cMFFC: n162 
+
+cnode: n163
+cMFFC: n155 n156 n157 n158 n159 n160 n161 n162 n163 
+this insig: 
+183 189 195 201 
+
+cnode: n164
+cMFFC: n164 
+
+cnode: n165
+cMFFC: n165 
+
+cnode: n166
+cMFFC: 207 n155 n156 n157 n158 n159 n160 n161 n162 n163 n164 n165 n166 
+this insig: 
+183 189 195 201 207 
+
+cnode: n167
+cMFFC: n167 
+
+cnode: n168
+cMFFC: n168 
+
+cnode: n170
+cMFFC: n170 
+
+cnode: n171
+cMFFC: n170 n171 
+this insig: 
+42 59 68 
+
+cnode: n172
+cMFFC: 72 n170 n171 n172 
+this insig: 
+42 59 68 72 
+
+cnode: n173
+cMFFC: 72 n170 n171 n172 n173 
+this insig: 
+42 59 68 72 n109 
+
+cnode: n174
+cMFFC: 72 73 n170 n171 n172 n173 n174 
+this insig: 
+42 59 68 72 73 n109 
+
+cnode: n175
+cMFFC: n175 
+
+cnode: n176
+cMFFC: 267 n176 
+this insig: 
+255 267 
+
+cnode: n177
+cMFFC: n177 
+
+cnode: n178
+cMFFC: n178 
+
+cnode: n179
+cMFFC: n178 n179 
+this insig: 
+55 447 n177 
+
+cnode: n180
+cMFFC: n178 n179 n180 
+this insig: 
+55 268 447 n177 
+
+cnode: n181
+cMFFC: n181 
+
+cnode: n182
+cMFFC: n181 n182 
+this insig: 
+59 156 447 
+
+cnode: n183
+cMFFC: n183 
+
+cnode: n184
+cMFFC: n183 n184 
+this insig: 
+1 17 n182 
+
+cnode: n185
+cMFFC: n185 
+
+cnode: n186
+cMFFC: n186 
+
+cnode: n187
+cMFFC: n187 
+
+cnode: n188
+cMFFC: n186 n187 n188 
+this insig: 
+17 42 
+
+cnode: n189
+cMFFC: n186 n187 n188 n189 
+this insig: 
+17 42 59 
+
+cnode: n190
+cMFFC: n186 n187 n188 n189 n190 
+this insig: 
+17 42 59 156 
+
+cnode: n191
+cMFFC: n186 n187 n188 n189 n190 n191 
+this insig: 
+17 42 59 156 447 
+
+cnode: n192
+cMFFC: n192 
+
+cnode: n193
+cMFFC: n192 n193 
+this insig: 
+17 51 n93 
+
+cnode: n194
+cMFFC: n194 
+
+cnode: n195
+cMFFC: n192 n193 n194 n195 
+this insig: 
+17 42 51 n93 n100 
+
+cnode: n196
+cMFFC: n186 n187 n188 n189 n190 n191 n192 n193 n194 n195 n196 
+this insig: 
+17 42 51 59 156 n93 n100 447 
+
+cnode: n197
+cMFFC: n197 
+
+cnode: n198
+cMFFC: n185 n197 n198 
+this insig: 
+126 153 n184 n196 
+
+cnode: n199
+cMFFC: n185 n197 n198 n199 
+this insig: 
+126 153 n180 n184 n196 
+
+cnode: n200
+cMFFC: n200 
+
+cnode: n201
+cMFFC: 267 n176 n200 n201 
+this insig: 
+246 255 267 n199 
+
+cnode: n202
+cMFFC: n202 
+
+cnode: n203
+cMFFC: n203 
+
+cnode: n204
+cMFFC: n204 
+
+cnode: n205
+cMFFC: n205 
+
+cnode: n206
+cMFFC: n206 
+
+cnode: n207
+cMFFC: n207 
+
+cnode: n208
+cMFFC: n206 n207 n208 
+this insig: 
+261 n205 
+
+cnode: n209
+cMFFC: n206 n207 n208 n209 
+this insig: 
+219 261 n205 
+
+cnode: n210
+cMFFC: n202 n206 n207 n208 n209 n210 
+this insig: 
+121 210 219 261 n205 
+
+cnode: n211
+cMFFC: n211 
+
+cnode: n212
+cMFFC: n212 
+
+cnode: n213
+cMFFC: n211 n212 n213 
+this insig: 
+228 237 n204 n205 
+
+cnode: n214
+cMFFC: n202 n205 n206 n207 n208 n209 n210 n211 n212 n213 n214 
+this insig: 
+121 210 219 228 237 261 n203 n204 
+
+cnode: n215
+cMFFC: 267 n176 n200 n201 n202 n205 n206 n207 n208 n209 n210 n211 n212 n213 n214 n215 
+this insig: 
+121 210 219 228 237 246 255 261 267 n199 n203 n204 
+
+cnode: n217
+cMFFC: n217 
+
+cnode: n218
+cMFFC: n218 
+
+cnode: n219
+cMFFC: n217 n218 n219 
+this insig: 
+111 143 n184 n196 
+
+cnode: n220
+cMFFC: n217 n218 n219 n220 
+this insig: 
+111 143 n180 n184 n196 
+
+cnode: n221
+cMFFC: n221 
+
+cnode: n222
+cMFFC: n222 
+
+cnode: n223
+cMFFC: n221 n222 n223 
+this insig: 
+183 246 n174 n220 
+
+cnode: n224
+cMFFC: n224 
+
+cnode: n225
+cMFFC: n225 
+
+cnode: n226
+cMFFC: n226 
+
+cnode: n227
+cMFFC: n227 
+
+cnode: n228
+cMFFC: n228 
+
+cnode: n229
+cMFFC: n229 
+
+cnode: n230
+cMFFC: n228 n229 n230 
+this insig: 
+116 146 n184 n196 
+
+cnode: n231
+cMFFC: n228 n229 n230 n231 
+this insig: 
+116 146 n180 n184 n196 
+
+cnode: n232
+cMFFC: n232 
+
+cnode: n233
+cMFFC: n233 
+
+cnode: n234
+cMFFC: n234 
+
+cnode: n235
+cMFFC: n233 n234 n235 
+this insig: 
+121 149 n184 n196 
+
+cnode: n236
+cMFFC: n233 n234 n235 n236 
+this insig: 
+121 149 n180 n184 n196 
+
+cnode: n237
+cMFFC: n237 
+
+cnode: n238
+cMFFC: n238 
+
+cnode: n239
+cMFFC: n239 
+
+cnode: n240
+cMFFC: n239 n240 
+this insig: 
+261 n203 n238 
+
+cnode: n241
+cMFFC: n241 
+
+cnode: n242
+cMFFC: n242 
+
+cnode: n243
+cMFFC: n243 
+
+cnode: n244
+cMFFC: n244 
+
+cnode: n245
+cMFFC: n244 n245 
+this insig: 
+n232 n242 n243 
+
+cnode: n246
+cMFFC: n241 n244 n245 n246 
+this insig: 
+n204 n232 n238 n242 n243 
+
+cnode: n247
+cMFFC: n238 n239 n240 n241 n244 n245 n246 n247 
+this insig: 
+261 n203 n204 n232 n237 n242 n243 
+
+cnode: n248
+cMFFC: n248 
+
+cnode: n249
+cMFFC: n249 
+
+cnode: n250
+cMFFC: n248 n249 n250 
+this insig: 
+n227 n247 
+
+cnode: n251
+cMFFC: n248 n249 n250 n251 
+this insig: 
+219 n227 n247 
+
+cnode: n252
+cMFFC: n224 n248 n249 n250 n251 n252 
+this insig: 
+106 210 219 n227 n247 
+
+cnode: n253
+cMFFC: n253 
+
+cnode: n254
+cMFFC: n254 
+
+cnode: n255
+cMFFC: n253 n254 n255 
+this insig: 
+228 237 n226 n227 
+
+cnode: n256
+cMFFC: n224 n227 n248 n249 n250 n251 n252 n253 n254 n255 n256 
+this insig: 
+106 210 219 228 237 n225 n226 n247 
+
+cnode: n258
+cMFFC: n258 
+
+cnode: n259
+cMFFC: 259 n259 
+this insig: 
+255 259 
+
+cnode: n260
+cMFFC: n260 
+
+cnode: n261
+cMFFC: 259 n259 n260 n261 
+this insig: 
+246 255 259 n231 
+
+cnode: n262
+cMFFC: n262 
+
+cnode: n263
+cMFFC: n263 
+
+cnode: n264
+cMFFC: n264 
+
+cnode: n265
+cMFFC: n264 n265 
+this insig: 
+261 n203 n237 
+
+cnode: n266
+cMFFC: n266 
+
+cnode: n267
+cMFFC: n266 n267 
+this insig: 
+n204 n237 n243 
+
+cnode: n268
+cMFFC: n264 n265 n266 n267 n268 
+this insig: 
+261 n203 n204 n237 n243 
+
+cnode: n269
+cMFFC: n269 
+
+cnode: n270
+cMFFC: n270 
+
+cnode: n271
+cMFFC: n264 n265 n266 n267 n268 n269 n270 n271 
+this insig: 
+261 n203 n204 n237 n243 n263 
+
+cnode: n272
+cMFFC: n264 n265 n266 n267 n268 n269 n270 n271 n272 
+this insig: 
+219 261 n203 n204 n237 n243 n263 
+
+cnode: n273
+cMFFC: n262 n264 n265 n266 n267 n268 n269 n270 n271 n272 n273 
+this insig: 
+111 210 219 261 n203 n204 n237 n243 n263 
+
+cnode: n274
+cMFFC: n274 
+
+cnode: n275
+cMFFC: n275 
+
+cnode: n276
+cMFFC: n274 n275 n276 
+this insig: 
+228 237 n242 n263 
+
+cnode: n277
+cMFFC: n262 n263 n264 n265 n266 n267 n268 n269 n270 n271 n272 n273 n274 n275 n276 n277 
+this insig: 
+111 210 219 228 237 261 n203 n204 n232 n237 n242 n243 
+
+cnode: n278
+cMFFC: 259 n259 n260 n261 n262 n263 n264 n265 n266 n267 n268 n269 n270 n271 n272 n273 n274 n275 n276 n277 n278 
+this insig: 
+111 210 219 228 237 246 255 259 261 n203 n204 n231 n232 n237 n242 n243 
+
+cnode: n280
+cMFFC: n280 
+
+cnode: n281
+cMFFC: 260 n281 
+this insig: 
+255 260 
+
+cnode: n282
+cMFFC: n282 
+
+cnode: n283
+cMFFC: 260 n281 n282 n283 
+this insig: 
+246 255 260 n236 
+
+cnode: n284
+cMFFC: n284 
+
+cnode: n285
+cMFFC: n285 
+
+cnode: n286
+cMFFC: n286 
+
+cnode: n287
+cMFFC: n286 n287 
+this insig: 
+261 n203 n204 
+
+cnode: n288
+cMFFC: n288 
+
+cnode: n289
+cMFFC: n289 
+
+cnode: n290
+cMFFC: n286 n287 n288 n289 n290 
+this insig: 
+261 n203 n204 n285 
+
+cnode: n291
+cMFFC: n286 n287 n288 n289 n290 n291 
+this insig: 
+219 261 n203 n204 n285 
+
+cnode: n292
+cMFFC: n284 n286 n287 n288 n289 n290 n291 n292 
+this insig: 
+116 210 219 261 n203 n204 n285 
+
+cnode: n293
+cMFFC: n293 
+
+cnode: n294
+cMFFC: n294 
+
+cnode: n295
+cMFFC: n293 n294 n295 
+this insig: 
+228 237 n243 n285 
+
+cnode: n296
+cMFFC: n284 n285 n286 n287 n288 n289 n290 n291 n292 n293 n294 n295 n296 
+this insig: 
+116 210 219 228 237 261 n203 n204 n237 n243 
+
+cnode: n297
+cMFFC: 260 n281 n282 n283 n284 n285 n286 n287 n288 n289 n290 n291 n292 n293 n294 n295 n296 n297 
+this insig: 
+116 210 219 228 237 246 255 260 261 n203 n204 n236 n237 n243 
+
+cnode: n299
+cMFFC: n299 
+
+cnode: n300
+cMFFC: n300 
+
+cnode: n301
+cMFFC: n299 n300 n301 
+this insig: 
+8 91 138 n196 
+
+cnode: n302
+cMFFC: n302 
+
+cnode: n303
+cMFFC: n303 
+
+cnode: n304
+cMFFC: n304 
+
+cnode: n305
+cMFFC: n304 n305 
+this insig: 
+17 447 n177 
+
+cnode: n306
+cMFFC: n304 n305 n306 
+this insig: 
+17 268 447 n177 
+
+cnode: n307
+cMFFC: n303 n307 
+this insig: 
+143 n302 n306 
+
+cnode: n308
+cMFFC: n299 n300 n301 n303 n307 n308 
+this insig: 
+8 91 138 143 n196 n302 n306 
+
+cnode: n309
+cMFFC: n309 
+
+cnode: n310
+cMFFC: n310 
+
+cnode: n311
+cMFFC: n310 n311 
+this insig: 
+n225 n226 n247 
+
+cnode: n312
+cMFFC: n312 
+
+cnode: n313
+cMFFC: n313 
+
+cnode: n314
+cMFFC: n312 n313 n314 
+this insig: 
+51 96 138 n196 
+
+cnode: n315
+cMFFC: n315 
+
+cnode: n316
+cMFFC: n315 n316 
+this insig: 
+146 n302 n306 
+
+cnode: n317
+cMFFC: n312 n313 n314 n315 n316 n317 
+this insig: 
+51 96 138 146 n196 n302 n306 
+
+cnode: n318
+cMFFC: n318 
+
+cnode: n319
+cMFFC: n319 
+
+cnode: n320
+cMFFC: n320 
+
+cnode: n321
+cMFFC: n319 n320 n321 
+this insig: 
+17 101 138 n196 
+
+cnode: n322
+cMFFC: n322 
+
+cnode: n323
+cMFFC: n322 n323 
+this insig: 
+149 n302 n306 
+
+cnode: n324
+cMFFC: n319 n320 n321 n322 n323 n324 
+this insig: 
+17 101 138 149 n196 n302 n306 
+
+cnode: n325
+cMFFC: n325 
+
+cnode: n326
+cMFFC: n326 
+
+cnode: n327
+cMFFC: 152 n327 
+this insig: 
+138 152 
+
+cnode: n328
+cMFFC: n328 
+
+cnode: n329
+cMFFC: 152 n327 n328 n329 
+this insig: 
+106 138 152 n196 
+
+cnode: n330
+cMFFC: n330 
+
+cnode: n331
+cMFFC: n330 n331 
+this insig: 
+153 n302 n306 
+
+cnode: n332
+cMFFC: 152 n327 n328 n329 n330 n331 n332 
+this insig: 
+106 138 152 153 n196 n302 n306 
+
+cnode: n333
+cMFFC: n333 
+
+cnode: n334
+cMFFC: n334 
+
+cnode: n335
+cMFFC: n334 n335 
+this insig: 
+n311 n326 n333 
+
+cnode: n336
+cMFFC: n336 
+
+cnode: n337
+cMFFC: n337 
+
+cnode: n338
+cMFFC: n338 
+
+cnode: n339
+cMFFC: n339 
+
+cnode: n340
+cMFFC: n340 
+
+cnode: n341
+cMFFC: n340 n341 
+this insig: 
+n318 n338 n339 
+
+cnode: n342
+cMFFC: n337 n340 n341 n342 
+this insig: 
+n318 n326 n336 n338 n339 
+
+cnode: n343
+cMFFC: n326 n334 n335 n337 n340 n341 n342 n343 
+this insig: 
+n311 n318 n325 n333 n336 n338 n339 
+
+cnode: n344
+cMFFC: n344 
+
+cnode: n345
+cMFFC: n345 
+
+cnode: n347
+cMFFC: n347 
+
+cnode: n348
+cMFFC: n348 
+
+cnode: n349
+cMFFC: n347 n348 n349 
+this insig: 
+177 246 n174 n332 
+
+cnode: n350
+cMFFC: n350 
+
+cnode: n351
+cMFFC: n351 
+
+cnode: n352
+cMFFC: n352 
+
+cnode: n353
+cMFFC: n353 
+
+cnode: n354
+cMFFC: n352 n353 n354 
+this insig: 
+n311 n351 
+
+cnode: n355
+cMFFC: n352 n353 n354 n355 
+this insig: 
+219 n311 n351 
+
+cnode: n356
+cMFFC: n350 n352 n353 n354 n355 n356 
+this insig: 
+101 210 219 n311 n351 
+
+cnode: n357
+cMFFC: n357 
+
+cnode: n358
+cMFFC: n358 
+
+cnode: n359
+cMFFC: n357 n358 n359 
+this insig: 
+228 237 n336 n351 
+
+cnode: n360
+cMFFC: n350 n351 n352 n353 n354 n355 n356 n357 n358 n359 n360 
+this insig: 
+101 210 219 228 237 n311 n333 n336 
+
+cnode: n362
+cMFFC: n362 
+
+cnode: n363
+cMFFC: n363 
+
+cnode: n364
+cMFFC: n362 n363 n364 
+this insig: 
+159 246 n174 n308 
+
+cnode: n365
+cMFFC: n365 
+
+cnode: n366
+cMFFC: n366 
+
+cnode: n367
+cMFFC: n367 
+
+cnode: n368
+cMFFC: n368 
+
+cnode: n369
+cMFFC: n367 n368 n369 
+this insig: 
+n343 n366 
+
+cnode: n370
+cMFFC: n367 n368 n369 n370 
+this insig: 
+219 n343 n366 
+
+cnode: n371
+cMFFC: n365 n367 n368 n369 n370 n371 
+this insig: 
+210 219 268 n343 n366 
+
+cnode: n372
+cMFFC: n372 
+
+cnode: n373
+cMFFC: n373 
+
+cnode: n374
+cMFFC: n372 n373 n374 
+this insig: 
+228 237 n309 n366 
+
+cnode: n375
+cMFFC: n365 n366 n367 n368 n369 n370 n371 n372 n373 n374 n375 
+this insig: 
+210 219 228 237 268 n309 n343 n344 
+
+cnode: n377
+cMFFC: n377 
+
+cnode: n378
+cMFFC: n378 
+
+cnode: n379
+cMFFC: n377 n378 n379 
+this insig: 
+165 246 n174 n317 
+
+cnode: n380
+cMFFC: n380 
+
+cnode: n381
+cMFFC: n381 
+
+cnode: n382
+cMFFC: n382 
+
+cnode: n383
+cMFFC: n382 n383 
+this insig: 
+n311 n325 n333 
+
+cnode: n384
+cMFFC: n384 
+
+cnode: n385
+cMFFC: n384 n385 
+this insig: 
+n325 n336 n339 
+
+cnode: n386
+cMFFC: n382 n383 n384 n385 n386 
+this insig: 
+n311 n325 n333 n336 n339 
+
+cnode: n387
+cMFFC: n387 
+
+cnode: n388
+cMFFC: n388 
+
+cnode: n389
+cMFFC: n382 n383 n384 n385 n386 n387 n388 n389 
+this insig: 
+n311 n325 n333 n336 n339 n381 
+
+cnode: n390
+cMFFC: n382 n383 n384 n385 n386 n387 n388 n389 n390 
+this insig: 
+219 n311 n325 n333 n336 n339 n381 
+
+cnode: n391
+cMFFC: n380 n382 n383 n384 n385 n386 n387 n388 n389 n390 n391 
+this insig: 
+91 210 219 n311 n325 n333 n336 n339 n381 
+
+cnode: n392
+cMFFC: n392 
+
+cnode: n393
+cMFFC: n393 
+
+cnode: n394
+cMFFC: n392 n393 n394 
+this insig: 
+228 237 n338 n381 
+
+cnode: n395
+cMFFC: n380 n381 n382 n383 n384 n385 n386 n387 n388 n389 n390 n391 n392 n393 n394 n395 
+this insig: 
+91 210 219 228 237 n311 n318 n325 n333 n336 n338 n339 
+
+cnode: n397
+cMFFC: n397 
+
+cnode: n398
+cMFFC: n398 
+
+cnode: n399
+cMFFC: n397 n398 n399 
+this insig: 
+171 246 n174 n324 
+
+cnode: n400
+cMFFC: n400 
+
+cnode: n401
+cMFFC: n401 
+
+cnode: n402
+cMFFC: n402 
+
+cnode: n403
+cMFFC: n402 n403 
+this insig: 
+n311 n333 n336 
+
+cnode: n404
+cMFFC: n404 
+
+cnode: n405
+cMFFC: n405 
+
+cnode: n406
+cMFFC: n402 n403 n404 n405 n406 
+this insig: 
+n311 n333 n336 n401 
+
+cnode: n407
+cMFFC: n402 n403 n404 n405 n406 n407 
+this insig: 
+219 n311 n333 n336 n401 
+
+cnode: n408
+cMFFC: n400 n402 n403 n404 n405 n406 n407 n408 
+this insig: 
+96 210 219 n311 n333 n336 n401 
+
+cnode: n409
+cMFFC: n409 
+
+cnode: n410
+cMFFC: n410 
+
+cnode: n411
+cMFFC: n409 n410 n411 
+this insig: 
+228 237 n339 n401 
+
+cnode: n412
+cMFFC: n400 n401 n402 n403 n404 n405 n406 n407 n408 n409 n410 n411 n412 
+this insig: 
+96 210 219 228 237 n311 n325 n333 n336 n339 
+****************************
+step3. print MFFC to the output file: 
+debug1

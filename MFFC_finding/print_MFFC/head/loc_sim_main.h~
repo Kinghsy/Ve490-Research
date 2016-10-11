@@ -1,0 +1,13 @@
+#ifndef LOC_SIM_MAIN_H
+#define LOC_SIM_MAIN_H
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+
+void loc_sim_main(BnetNetwork *net, string &filename, double threshold);
+int loc_sim_ite(BnetNetwork *net, BnetNetwork *&net_comb, DdManager **dd_comb, map<char*, struct score_pla> &sim_record, char *last_node, vector<char*> &last_inputs, double threshold, double &real_er, int &iIndex);
+
+#endif

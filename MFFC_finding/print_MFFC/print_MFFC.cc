@@ -1,0 +1,146 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <map>
+#include <cmath>
+#include <cassert>
+#include <ctime>
+#include <sys/timeb.h>
+#include "head/queue.h"
+#include "head/basics.h"
+#include "head/bnet.h"
+
+
+using namespace std;
+
+extern int numPI_ini;
+
+/*
+functions in this file:
+
+*/
+
+//Global variables and external variables
+
+
+void print_MFFC(BnetNetwork *net, string &outfile, string &outfile2, int num_input)
+{
+    //variables
+    struct timeb startTime, endTime; 
+    BnetNode *nd;
+    
+    //iterators
+    map<char*, set<char*> >::iterator itrm_cs;
+    map<char*, char*>::iterator itrm_cc;
+    map<char*, map<char*, char*> >:: iterator itrm_cm;
+    set<char*>::iterator itrs;
+
+        
+    //Topological sort
+    cout << "****************************" << endl;
+    cout << "step1. topSort: " << endl;	
+    vector<char*> sort_list;
+    topSort(&net, sort_list);
+    for(int i = 0; i < sort_list.size(); i++)
+    	cout << sort_list[i] << " ";
+    cout << endl;
+    
+    //Get MFFC for each node and find input signals for each MFFC
+    cout << "****************************" << endl;
+    cout << "step2. get_MFFC & find_insig_MFFC: " << endl;	
+    map<char*, set<char*> > TFI_set, MFFC_set;
+    get_MFFC(net, sort_list, TFI_set, MFFC_set);
+    map<char*, map<char*, char*> > insig_MFFC;
+    find_insig_MFFC(net, MFFC_set, insig_MFFC);
+
+
+ 	//Get MFFC for each node and find input signals for each MFFC
+    cout << "****************************" << endl;
+    cout << "step3. print MFFC to the output file: " << endl;
+    ofstream fout;
+    ofstream fout2;
+    fout.open(outfile.c_str(), ios::out);
+    fout2.open(outfile2.c_str(), ios::out);	
+
+    int LUTs_count_array[21] = {0};
+    int node_count1 = 0;
+    int node_count2 = 0;
+    int LUTs_count_total1 = 0;
+    int LUTs_count_total2 = 0;
+    int LUTs_potentially_saved = 0;
+    int total_LUTs_count = 0;
+
+	for(itrm_cs = MFFC_set.begin(); itrm_cs != MFFC_set.end(); itrm_cs++)
+	{
+		char *cnode = itrm_cs->first;
+		set<char*> this_MFFC = itrm_cs->second;
+		if(this_MFFC.size() == 1)
+			continue;
+			
+		st_lookup(net->hash, cnode, &nd);
+		itrm_cm = insig_MFFC.find(nd->name);
+		map<char*, char*> insig = itrm_cm->second;	
+
+		total_LUTs_count += this_MFFC.size();
+        //if(insig.size() <= num_input)
+	if(insig.size() == num_input)
+	    {
+		node_count1++;
+	    	fout << endl << "*****************************************" << endl;
+		int count_2input_LUTs = this_MFFC.size();
+		LUTs_count_total1 = LUTs_count_total1 + count_2input_LUTs;
+		LUTs_potentially_saved = LUTs_potentially_saved + count_2input_LUTs - (num_input - 1);
+
+		if(count_2input_LUTs <= 20){
+			LUTs_count_array[count_2input_LUTs-1]++;
+		}
+		else{
+			LUTs_count_array[20]++;
+		}
+		fout << "**" << "#2-input LUTs: " << count_2input_LUTs << endl;
+	    	fout << "node: " << cnode << endl;	    	
+	    	write_MFFC(net, fout, cnode, this_MFFC, insig);
+	    }
+	
+	else
+	    {
+		int count_2input_LUTs = this_MFFC.size();
+		LUTs_count_total2 = LUTs_count_total2 + count_2input_LUTs;
+		node_count2++;
+		fout2 << endl << "*****************************************" << endl;
+	    	fout2 << "node: " << cnode << endl;	    	
+	    	write_MFFC(net, fout2, cnode, this_MFFC, insig);
+	    }
+	}
+
+	fout << endl << "*****************************************" << endl;
+	fout << endl << "*****************************************" << endl;
+	for(int i=0; i<20; i++){
+		if(LUTs_count_array[i] > 0){
+			fout << "** MFFCs with " << i+1 << " two-input LUTs count: " << LUTs_count_array[i] << endl;
+		}
+	}
+	if(LUTs_count_array[20] > 0){
+		fout << "** MFFCs with over 20 two-input LUTs count: " << LUTs_count_array[20] << endl;
+	}
+	fout << "** " << " total chosen node count: " << node_count1 << endl;	
+	fout << "** " << " total chosen two-input LUTs count: " << LUTs_count_total1 << endl;
+	fout << "** " << " two-input LUTs potentially saved: " << LUTs_potentially_saved << endl;
+	fout << endl << "*****************************************" << endl;
+	fout << endl << "*****************************************" << endl;
+
+	fout2 << "** " << " total chosen node count: " << node_count2 << endl;
+	fout2 << "** " << " total chosen two-input LUTs count: " << LUTs_count_total2 << endl;
+
+	fout << "** total 2-input LUTs count: " << total_LUTs_count << endl;
+
+	fout.close();
+	fout2.close();
+
+}
+
+

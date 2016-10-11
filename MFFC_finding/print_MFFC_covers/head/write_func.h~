@@ -1,0 +1,23 @@
+#ifndef WRITE_FUNC_H
+#define WRITE_FUNC_H
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+
+void write_ckt_org(BnetNetwork *net);
+void write_mvsis_rug(int iIndex, char *node);
+void write_mvsis_rug_MFFC(char *node);
+void write_ckt_bignode(BnetNetwork *net, char *cnode);
+void write_ckt_bignode_MFFC(BnetNetwork *net, char *cnode, set<char*> &cMFFC, map<char*, char*> &in_sig);
+void cluster_ckt(BnetNetwork *net, char *cnode, set<char*> &cMFFC, map<char*, char*> &in_sig, vector<string> &org_pla);
+void write_bignode_pla(BnetNetwork *net, char *cnode);
+void write_bignode_pla_sim(BnetNetwork *net, char *cnode, vector<char*> &insig, vector<string> &sim_org_pla);
+void write_ckt_sim(BnetNetwork *net, char *cnode, set<char*> &cMFFC, vector<char*> &insig, vector<string> &final_pla);
+void write_ckt_comb(BnetNetwork *net);
+void gen_ckt_tb(int num_input, int num_output);
+void write_ckt_sim_const(BnetNetwork *net, char *cnode, int pol);
+
+#endif

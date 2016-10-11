@@ -1,0 +1,22 @@
+#ifndef READ_FILE_H
+#define READ_FILE_H 
+ 
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <cstdio>
+#include <string>
+#include <set>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <math.h>
+#include <cassert>
+
+int read_espresso_result(int num_lit_org);
+int read_sis_result(int &area_save);
+void read_mvsis_result(vector<string> &dont_care, vector<string> &ori_pla_v0, vector<string> &insig_string);
+void read_factor(vector<string> &lit_unit);
+
+#endif 
+

@@ -1,0 +1,211 @@
+
+*****************************************
+**#2-input LUTs: 5
+node: n57
+.model bigNode
+.inputs n47 n48 n49 n50 n51 n52 
+.outputs n57
+.names n51 n52 n53
+00 1
+.names n50 n53 n54
+01 1
+.names n49 n54 n55
+01 1
+.names n48 n55 n56
+01 1
+.names n47 n56 n57
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n110
+.model bigNode
+.inputs n80 n85 n90 n95 n100 n105 
+.outputs n110
+.names n100 n105 n106
+00 1
+.names n95 n106 n107
+01 1
+.names n90 n107 n108
+01 1
+.names n85 n108 n109
+01 1
+.names n80 n109 n110
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n186
+.model bigNode
+.inputs 102 112 115 223 329 370 
+.outputs n186
+.names 115 370 n182
+11 1
+.names 102 223 n183
+11 1
+.names 112 329 n184
+11 1
+.names n183 n184 n185
+00 1
+.names n182 n185 n186
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n192
+.model bigNode
+.inputs 89 99 105 223 329 370 
+.outputs n192
+.names 105 370 n188
+11 1
+.names 89 223 n189
+11 1
+.names 99 329 n190
+11 1
+.names n189 n190 n191
+00 1
+.names n188 n191 n192
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n198
+.model bigNode
+.inputs 76 86 92 223 329 370 
+.outputs n198
+.names 92 370 n194
+11 1
+.names 76 223 n195
+11 1
+.names 86 329 n196
+11 1
+.names n195 n196 n197
+00 1
+.names n194 n197 n198
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n204
+.model bigNode
+.inputs 63 73 79 223 329 370 
+.outputs n204
+.names 79 370 n200
+11 1
+.names 63 223 n201
+11 1
+.names 73 329 n202
+11 1
+.names n201 n202 n203
+00 1
+.names n200 n203 n204
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n210
+.model bigNode
+.inputs 50 60 66 223 329 370 
+.outputs n210
+.names 66 370 n206
+11 1
+.names 50 223 n207
+11 1
+.names 60 329 n208
+11 1
+.names n207 n208 n209
+00 1
+.names n206 n209 n210
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n216
+.model bigNode
+.inputs 37 47 53 223 329 370 
+.outputs n216
+.names 53 370 n212
+11 1
+.names 37 223 n213
+11 1
+.names 47 329 n214
+11 1
+.names n213 n214 n215
+00 1
+.names n212 n215 n216
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n222
+.model bigNode
+.inputs 11 21 27 223 329 370 
+.outputs n222
+.names 27 370 n218
+11 1
+.names 11 223 n219
+11 1
+.names 21 329 n220
+11 1
+.names n219 n220 n221
+00 1
+.names n218 n221 n222
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n228
+.model bigNode
+.inputs 24 34 40 223 329 370 
+.outputs n228
+.names 40 370 n224
+11 1
+.names 24 223 n225
+11 1
+.names 34 329 n226
+11 1
+.names n225 n226 n227
+00 1
+.names n224 n227 n228
+01 1
+.end
+
+*****************************************
+**#2-input LUTs: 5
+node: n235
+.model bigNode
+.inputs n193 n199 n205 n211 n217 n230 
+.outputs n235
+.names n217 n230 n231
+01 1
+.names n211 n231 n232
+01 1
+.names n205 n232 n233
+01 1
+.names n199 n233 n234
+01 1
+.names n193 n234 n235
+01 1
+.end
+
+*****************************************
+
+*****************************************
+** MFFCs with 5 two-input LUTs count: 11
+**  total chosen node count: 11
+**  total chosen two-input LUTs count: 55
+**  two-input LUTs potentially saved: 0
+
+*****************************************
+
+*****************************************
+** total 2-input LUTs count: 702

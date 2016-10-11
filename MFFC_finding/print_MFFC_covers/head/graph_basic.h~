@@ -1,0 +1,69 @@
+#ifndef GRAPH_H
+#define GRAPH_H
+#include <vector>
+#include <map>
+#include <iostream>
+#include "HashTable.h"
+#include "node.h"
+#include "edge.h"
+
+
+using namespace std;
+class Graph
+{
+	map<int, Node*> nodes;
+	map<int, Edge*> edges;
+	vector<Node*> cutnodes;
+	map<int, int> inputNodes;
+	map<int, int> outputNodes;
+	int numInputs, numOutputs, numNodes;
+
+	public:	
+	
+	/*graph.cc*/
+	Graph();
+	~Graph();
+	void init(ifstream &fin, int &N, int &PO, int ite);
+	void addelement(int ni1, int ni2, int no, string ipattern1, string ipattern2, int &indEdge);
+	void traverse(int flag);
+	void topSort(vector<int> &sort_list);	
+	double COP(int target, vector<int> &sort_list);
+	double COP(int target, vector<int> &sort_list, map<int, double> &prob_COP);
+	double COP(int target, vector<int> &sort_list, int inlead, double sp);
+	void WAA(vector<int> &sort_list);
+	double findmin(double p);
+	void sort_cutnodes();
+	
+	void MFFC(vector<int> &sort_list);
+	void exdc(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set, double threshold, int max_err_invec);
+//	void exdc_new(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set, double threshold, int max_err_invec, vector<string> &dont_care, int iIndex);
+	void exdc_new_v2(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set, double threshold, int max_err_invec, vector<string> &dont_care, int iIndex);
+	void find_insig_MFFC(multimap<double, int> &sp_MFFC, map<int, map<int, int> > &insig_MFFC);
+	int find_exdc_sim(multimap<double, int> &sp_MFFC, map<int, map<int, int> > &insig_MFFC, map<int, vector<string> > &node_sim_files, int &max_node_save,  int max_err_invec, double threshold, int iIndex);
+	void extract_sim_nodes(int max_save_node, map<int, map<int, int> > &insig_MFFC, vector<string> &sim_node_lines, vector<string> &sim_node_nodes);
+	void update_ckt(int ite);
+	void permute(vector<string> &dont_care, vector<string> &insig_string);
+	void cal_sp(int iIndex);
+	int loc_sim_ite(double threshold, vector<int> &sort_list, int &num_diff, double &real_er,  int max_err_invec, int &iIndex);
+	void loc_sim_main(double threshold, vector<int> &sort_list);
+	
+	/*write_func.cc*/
+	void gen_ckt_tb();
+        void gen_ckt_tb_bn(int input_size, int output_size);
+	void gen_ckt_tb_saif(int iIndex);
+	void gen_ckt_tb_simu(vector<string> &error_invec, vector<string> &all_nodes);
+	void write_ckt_bignode(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set);
+	void write_ckt_bignode_mv(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set);
+	void write_ckt_org();
+	void write_ckt_sim(Node *node, vector<string> &sim_node_nodes, map<int, int> &const_PO);
+	void write_ckt_bignode(Node *cnode, map<int, int> &in_sig, vector<int> &sort_insig);
+	void add_exdc_pla(vector<string> &exdc_set);
+	void cluster_ckt(int max_save_node, map<int, int> &in_sig, int iIndex);
+
+	/*helper.cc*/
+	void call_modelsim_simu(map<int, Node*> &nodes,  vector<string> &all_nodes, int numInputs);
+	double exdc_real_er(string &sexdc, int num_digit,  int iIndex);
+	void dc_real_er(map<string, double> &dc_include, int iIndex);
+
+};
+#endif

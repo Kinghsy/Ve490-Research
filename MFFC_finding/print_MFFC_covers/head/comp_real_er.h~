@@ -1,0 +1,19 @@
+#ifndef COMP_REAL_ER_H
+#define COMP_REAL_ER_H 
+ 
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <cstdio>
+#include <string>
+#include <set>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <math.h>
+#include <cassert>
+
+	double comp_real_er(BnetNetwork **net, BnetNetwork **net_sim, DdManager **dd);
+
+#endif 
+

@@ -1,0 +1,12 @@
+ build bdd:
+ 
+ DdManager *dd = NULL;
+ dd = Cudd_Init(0, 0, CUDD_UNIQUE_SLOTS, CUDD_CACHE_SLOTS, 0);
+ if (dd == NULL) return -1;      
+    cudd_build_v2(net, &dd, filename_bdd.c_str(), BNET_GLOBAL_DD);
+    
+    
+free network and quit cudd:
+    
+Bnet_FreeNetwork_Bdd(net, dd);
+Cudd_Quit(dd);

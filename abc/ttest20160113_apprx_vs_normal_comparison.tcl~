@@ -1,0 +1,38 @@
+source abc.rc
+read_library mcnc.genlib
+
+#read_truth -x 10100111010111110000110011011100  
+read_blif ./test_dir_20160113/rfile3_normal_vs_apprx_comparison.blif   
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+#write_verilog 2_LUTs_results/test1_result.v
+#write_bench 2_LUTs_results/test1_result.bench

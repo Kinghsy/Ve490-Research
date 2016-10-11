@@ -1,0 +1,16 @@
+.model bigNode
+.inputs 108 115 n63 n65 329 
+.outputs n119
+.names n65 329 n114
+00 1
+.names n65 329 n115
+11 1
+.names n114 n115 n116
+00 1
+.names 108 115 n117
+10 1
+.names n63 n117 n118
+01 1
+.names n116 n118 n119
+01 1
+.end

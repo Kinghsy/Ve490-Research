@@ -1,0 +1,121 @@
+source abc.rc
+read_library mcnc.genlib
+
+read_truth -x 10100111010111110000110011011100     
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test1_result.v
+write_bench test1_result.bench
+
+read_truth -x 10001011101100000010011011110011    
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test2_result.v
+write_bench test2_result.bench
+
+
+read_truth -x 10010111000111111100111010110010  
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test3_result.v
+write_bench test3_result.bench
+
+
+read_truth -x 01100011000000100111111010110000     
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test4_result.v
+write_bench test4_result.bench
+
+
+read_truth -x 00000111010001000100101111100001     
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test5_result.v
+write_bench test5_result.bench
+
+
+read_truth -x 10111101011011100010000001001001     
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test6_result.v
+write_bench test6_result.bench
+
+
+read_truth -x 01101001101111110110011011111101     
+strash
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_verilog test7_result.v
+write_bench test7_result.bench
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

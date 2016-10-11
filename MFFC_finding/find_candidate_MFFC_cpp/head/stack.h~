@@ -1,0 +1,43 @@
+#ifndef STACK_H
+#define STACK_H
+
+#include <iostream>
+
+using namespace std;  
+
+
+  
+class stack
+{  
+	private:  
+    	int *data;
+    	int size;
+    	int len;
+    	
+	public:  
+		stack(int length);
+		void push(int d);
+		int pop();
+		int get_num();
+		bool empty();
+		void traverse();
+		~stack();
+		
+};  
+
+struct ind_pair
+{
+	int sind;
+	int eind;
+};
+
+
+struct factor_unit
+{
+	string str;
+	map<int, int> parent_ind;
+	map<string, ind_pair> node_set;
+
+};
+
+#endif

@@ -1,0 +1,22 @@
+#ifndef SIM_V2_H
+#define SIM_V2_H
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <set>
+#include <map>
+#include <iostream>
+#include "../cudd/bnet.h"
+
+using namespace std; 
+
+double find_min_sp(BnetNetwork *net, multimap<double, char*> &min_sp);
+void find_ave_sp(BnetNetwork *net, multimap<double, char*> &ave_sp);
+char *find_exdc_sim(BnetNetwork *net, DdManager **dd, BnetNetwork *net_comb, DdManager **dd_comb, multimap<double, char*> &ave_sp, map<char*, vector<string> > &node_sim_files, char *last_node, vector<char*> &last_inputs, double &max_score, double threshold, int iIndex);
+void extract_sim_nodes(vector<string> &sim_node_lines, vector<string> &sim_node_nodes);
+
+#endif

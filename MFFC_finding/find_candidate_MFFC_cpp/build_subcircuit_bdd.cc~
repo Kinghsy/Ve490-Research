@@ -1,0 +1,45 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <map>
+#include <cmath>
+#include <cassert>
+#include <ctime>
+#include <sys/timeb.h>
+#include "head/queue.h"
+#include "head/basics.h"
+#include "head/bnet.h"
+
+
+using namespace std;
+
+void build_subcircuit_bdd()
+{
+	DdManager *dd;		/* pointer to DD manager */
+	NtrOptions *option;	/* options */
+	option = mainInit();
+	
+	string infile = "test/subckt1.blif"; 
+    	FILE *fp;
+    	fp = fopen(infile.c_str(), "r");
+    	BnetNetwork *net = Bnet_ReadNetwork(fp);
+
+	/* Initialize manager. We start with 0 variables, because
+	** Ntr_buildDDs will create new variables rather than using
+	** whatever already exists.
+	*/
+	dd = startCudd(option,net->ninputs);
+	if (dd == NULL) { exit(2); }
+
+	int result = Ntr_buildDDs(net, dd, option, NULL);
+	if (result == 0) { exit(2); }
+
+
+
+}
+
+

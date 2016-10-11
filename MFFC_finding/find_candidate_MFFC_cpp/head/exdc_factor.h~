@@ -1,0 +1,36 @@
+#ifndef EXDC_FACTOR_H
+#define EXDC_FACTOR_H
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <set>
+#include <map>
+#include <iostream>
+#include "../cudd/bnet.h"
+#include "btree.h"
+#include "sim_new.h"
+
+using namespace std; 
+
+void dc_real_er_v2(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, map<string, double> &dc_include, double &total_er);
+double exdc_real_er_v2(BnetNetwork *net, DdManager **dd, vector<char*> &cutnodes, string &sexdc, int num_digit);
+
+void build_btree(vector<string> &lit_unit, vector<string> &sop_set, vector<string> &factor_set, map<string, btNode*> &factor_exp_trees);
+void build_tree_from_exp(string &str, btNode **root);
+
+int check_ignore_case(BnetNetwork *net, istringstream &ss1, string &cstr);
+void retrieve_cube(istringstream &ss, map<string, int> &name_pos, int num_input, string &ccube);
+
+int exdc_cubes_real_er(BnetNetwork *net, DdManager **dd, vector<string> &dont_care, vector<string> &local_dc_set, vector<char*> &cutnodes, vector<string> &exdc_cubes, double &this_real_er, double threshold);
+
+void get_true_name(string &s, string &ncstr, int &sign);
+
+void exdc_factor(BnetNetwork *net, DdManager **dd, char *cnode, vector<char*> &unsort_cutnodes, map<char*, struct score_pla> &sim_record, vector<string> &org_pla, vector<string> &dont_care, vector<string> &local_dc_set, struct score_pla &max_sp, double threshold, int iIndex);
+
+
+
+#endif

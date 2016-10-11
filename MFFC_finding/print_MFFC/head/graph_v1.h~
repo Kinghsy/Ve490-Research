@@ -1,0 +1,49 @@
+#ifndef GRAPH_V1_H
+#define GRAPH_V1_H
+#include <vector>
+#include <map>
+#include <iostream>
+#include "HashTable.h"
+#include "node.h"
+#include "edge.h"
+
+
+using namespace std;
+class Graph
+{
+	map<int, Node*> nodes;
+	map<int, Edge*> edges;
+	vector<Node*> cutnodes;
+//	vector<Edge*> cutedges;
+	map<int, int> inputNodes;
+	map<int, int> outputNodes;
+	int numInputs, numOutputs, numNodes;
+	public:	
+	
+	/*graph_v1.cc*/
+	Graph();
+	~Graph();
+	void init(ifstream &fin, int &N, int &PO);
+	void addelement(int ni1, int ni2, int no, int ipattern1, int ipattern2, int &indEdge);
+	void traverse(int flag);
+	void topSort(vector<int> &sort_list);	
+	double COP(int target, vector<int> &sort_list);
+	double COP(int target, vector<int> &sort_list, map<int, double> &prob_COP);
+	double COP(int target, vector<int> &sort_list, int inlead, double sp);
+	void WAA(vector<int> &sort_list);
+	double findmin(double p);
+	void sort();
+	
+	void MFFC(vector<int> &sort_list);
+	void exdc(Node *cnode, map<int, int> &in_sig, vector<string> &exdc_set, double threshold);	
+	int read_abc_result();
+	void find_insig_MFFC(multimap<double, int> &sp_MFFC, map<int, map<int, int> > &insig_MFFC);
+	int find_exdc_sim(multimap<double, int> &sp_MFFC, map<int, map<int, int> > &insig_MFFC, map<int, vector<string> > &node_sim_files, int &max_area_save, double threshold);
+	void extract_sim_nodes(int max_save_node, map<int, map<int, int> > &insig_MFFC, vector<string> &sim_node_lines, vector<string> &sim_node_nodes);
+	void update_ckt();
+	int loc_sim_ite(double threshold, vector<int> &sort_list, double &real_er);
+	void loc_sim_main(double threshold, vector<int> &sort_list);
+	
+	
+};
+#endif

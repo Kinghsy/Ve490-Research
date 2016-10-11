@@ -1,0 +1,13 @@
+# Benchmark "rand4" written by ABC on Sat Aug  1 07:13:59 2015
+.model rand4
+.inputs i0 i1 i2 i3
+.outputs f
+.names i2 i3 n6
+11 1
+.names i2 n6 n7
+10 1
+.names i1 n7 n8
+00 1
+.names i0 n8 f
+01 1
+.end

@@ -1,0 +1,154 @@
+source abc.rc
+read_library mcnc.genlib
+
+read_truth -x 10100111010111110000110011011100     
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test1_result.bench
+
+read_truth -x 10001011101100000010011011110011    
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test2_result.bench
+
+
+read_truth -x 10010111000111111100111010110010  
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test3_result.bench
+
+
+read_truth -x 01100011000000100111111010110000     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test4_result.bench
+
+
+read_truth -x 00000111010001000100101111100001     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test5_result.bench
+
+
+read_truth -x 10111101011011100010000001001001     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test6_result.bench
+
+
+read_truth -x 01101001101111110110011011111101     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test7_result.bench
+
+read_truth -x 11011001100110100100110001001111     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test8_result.bench
+
+
+read_truth -x 10101001010000011010011000011001     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test9_result.bench
+
+
+read_truth -x 00111100010111101001011111110000     
+strash
+resyn2
+resyn2
+resyn2
+resyn2
+if -K 3
+if -K 3
+if -K 3
+if -K 3
+show
+write_bench ./4_LUTs_results/test10_result.bench
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

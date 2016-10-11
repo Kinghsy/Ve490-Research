@@ -1,0 +1,42 @@
+source abc.rc
+read_library mcnc.genlib
+
+#read_truth -x 10100111010111110000110011011100  
+read_blif ./test_dir_20160113/rfile3.blif   
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+resyn2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+compress2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+if -K 2
+show
+write_eqn ./test_dir_20160113/result_20160113_eqn_result.txt
+write_cnf ./test_dir_20160113/result_20160113_cnf_result.txt
+collapse
+write_pla ./test_dir_20160113/result_20160113_pla_result.txt
+#write_verilog 2_LUTs_results/test1_result.v
+#write_bench 2_LUTs_results/test1_result.bench

@@ -1,0 +1,34 @@
+.model bigNode
+.inputs i00 i01 i02 i05 i09 n1453 
+.outputs n1456
+.names i01 i09 n1441
+11 1
+.names i01 i09 n1442
+00 1
+.names n1441 n1442 n1443
+00 1
+.names i02 n1443 n1444
+00 1
+.names i00 n1444 n1445
+11 1
+.names i01 i09 n1446
+01 1
+.names i01 i09 n1447
+10 1
+.names n1446 n1447 n1448
+00 1
+.names i02 n1448 n1449
+10 1
+.names i00 n1449 n1450
+01 1
+.names n1445 n1450 n1451
+00 1
+.names i05 n1451 n1452
+10 1
+.names i01 n1453 n1454
+01 1
+.names i00 n1454 n1455
+11 1
+.names n1452 n1455 n1456
+00 1
+.end

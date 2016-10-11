@@ -1,0 +1,1146 @@
+
+*****************************************
+node: n16
+.model bigNode
+.inputs i3 i4 i5 
+.outputs n16
+.names i4 i5 n15
+00 1
+.names i3 n15 n16
+01 1
+.end
+
+*****************************************
+node: n17
+.model bigNode
+.inputs i3 n13 n16 
+.outputs n17
+.names i3 n13 n14
+11 1
+.names n14 n16 n17
+00 1
+.end
+
+*****************************************
+node: n21
+.model bigNode
+.inputs i3 n13 n16 n18 n19 
+.outputs n21
+.names i3 n13 n14
+11 1
+.names n14 n16 n17
+00 1
+.names n18 n19 n20
+00 1
+.names n17 n20 n21
+00 1
+.end
+
+*****************************************
+node: n23
+.model bigNode
+.inputs i1 i5 
+.outputs n23
+.names i1 i5 n22
+01 1
+.names i1 n22 n23
+00 1
+.end
+
+*****************************************
+node: n24
+.model bigNode
+.inputs i1 i4 i5 
+.outputs n24
+.names i1 i5 n22
+01 1
+.names i1 n22 n23
+00 1
+.names i4 n23 n24
+00 1
+.end
+
+*****************************************
+node: n26
+.model bigNode
+.inputs i1 i4 i5 n13 
+.outputs n26
+.names i1 i5 n22
+01 1
+.names i1 n22 n23
+00 1
+.names i4 n23 n24
+00 1
+.names i1 n13 n25
+01 1
+.names n24 n25 n26
+00 1
+.end
+
+*****************************************
+node: n27
+.model bigNode
+.inputs i1 i3 i4 i5 n13 
+.outputs n27
+.names i1 i5 n22
+01 1
+.names i1 n22 n23
+00 1
+.names i4 n23 n24
+00 1
+.names i1 n13 n25
+01 1
+.names n24 n25 n26
+00 1
+.names i3 n26 n27
+10 1
+.end
+
+*****************************************
+node: n33
+.model bigNode
+.inputs i1 i3 n31 
+.outputs n33
+.names i1 i3 n32
+00 1
+.names n31 n32 n33
+00 1
+.end
+
+*****************************************
+node: n34
+.model bigNode
+.inputs i0 i1 i3 n31 
+.outputs n34
+.names i1 i3 n32
+00 1
+.names n31 n32 n33
+00 1
+.names i0 n33 n34
+10 1
+.end
+
+*****************************************
+node: n36
+.model bigNode
+.inputs i0 i1 i3 
+.outputs n36
+.names i1 i3 n31
+11 1
+.names i1 i3 n32
+00 1
+.names n31 n32 n33
+00 1
+.names i0 n33 n34
+10 1
+.names i0 n31 n35
+01 1
+.names n34 n35 n36
+00 1
+.end
+
+*****************************************
+node: n37
+.model bigNode
+.inputs i0 i1 i3 i5 
+.outputs n37
+.names i1 i3 n31
+11 1
+.names i1 i3 n32
+00 1
+.names n31 n32 n33
+00 1
+.names i0 n33 n34
+10 1
+.names i0 n31 n35
+01 1
+.names n34 n35 n36
+00 1
+.names i5 n36 n37
+00 1
+.end
+
+*****************************************
+node: n39
+.model bigNode
+.inputs i3 i5 n18 
+.outputs n39
+.names i3 i5 n38
+01 1
+.names n18 n38 n39
+11 1
+.end
+
+*****************************************
+node: n40
+.model bigNode
+.inputs i0 i1 i3 i5 n18 
+.outputs n40
+.names i1 i3 n31
+11 1
+.names i1 i3 n32
+00 1
+.names n31 n32 n33
+00 1
+.names i0 n33 n34
+10 1
+.names i0 n31 n35
+01 1
+.names n34 n35 n36
+00 1
+.names i5 n36 n37
+00 1
+.names i3 i5 n38
+01 1
+.names n18 n38 n39
+11 1
+.names n37 n39 n40
+00 1
+.end
+
+*****************************************
+node: n44
+.model bigNode
+.inputs i1 i5 
+.outputs n44
+.names i1 i5 n42
+11 1
+.names i1 i5 n43
+00 1
+.names n42 n43 n44
+00 1
+.end
+
+*****************************************
+node: n45
+.model bigNode
+.inputs i1 i4 i5 
+.outputs n45
+.names i1 i5 n42
+11 1
+.names i1 i5 n43
+00 1
+.names n42 n43 n44
+00 1
+.names i4 n44 n45
+00 1
+.end
+
+*****************************************
+node: n46
+.model bigNode
+.inputs i1 i3 i4 i5 
+.outputs n46
+.names i1 i5 n42
+11 1
+.names i1 i5 n43
+00 1
+.names n42 n43 n44
+00 1
+.names i4 n44 n45
+00 1
+.names i3 n45 n46
+11 1
+.end
+
+*****************************************
+node: n47
+.model bigNode
+.inputs i0 i1 i3 i4 i5 
+.outputs n47
+.names i1 i5 n42
+11 1
+.names i1 i5 n43
+00 1
+.names n42 n43 n44
+00 1
+.names i4 n44 n45
+00 1
+.names i3 n45 n46
+11 1
+.names i0 n46 n47
+01 1
+.end
+
+*****************************************
+node: n56
+.model bigNode
+.inputs i5 n52 n54 
+.outputs n56
+.names i5 n52 n53
+11 1
+.names i5 n54 n55
+01 1
+.names n53 n55 n56
+00 1
+.end
+
+*****************************************
+node: n61
+.model bigNode
+.inputs i1 n57 n59 
+.outputs n61
+.names n57 n59 n60
+00 1
+.names i1 n60 n61
+10 1
+.end
+
+*****************************************
+node: n65
+.model bigNode
+.inputs i0 i1 n63 
+.outputs n65
+.names i1 n63 n64
+00 1
+.names i0 n64 n65
+11 1
+.end
+
+*****************************************
+node: n66
+.model bigNode
+.inputs i0 i1 n57 n59 n63 
+.outputs n66
+.names n57 n59 n60
+00 1
+.names i1 n60 n61
+10 1
+.names i1 n63 n64
+00 1
+.names i0 n64 n65
+11 1
+.names n61 n65 n66
+00 1
+.end
+
+*****************************************
+node: n70
+.model bigNode
+.inputs i2 n19 n68 
+.outputs n70
+.names i2 n68 n69
+01 1
+.names n19 n69 n70
+11 1
+.end
+
+*****************************************
+node: n78
+.model bigNode
+.inputs i3 n74 n76 
+.outputs n78
+.names i3 n74 n75
+01 1
+.names i3 n76 n77
+11 1
+.names n75 n77 n78
+00 1
+.end
+
+*****************************************
+node: n79
+.model bigNode
+.inputs i0 i3 n74 n76 
+.outputs n79
+.names i3 n74 n75
+01 1
+.names i3 n76 n77
+11 1
+.names n75 n77 n78
+00 1
+.names i0 n78 n79
+10 1
+.end
+
+*****************************************
+node: n82
+.model bigNode
+.inputs i3 n74 n76 
+.outputs n82
+.names i3 n74 n80
+11 1
+.names i3 n76 n81
+01 1
+.names n80 n81 n82
+00 1
+.end
+
+*****************************************
+node: n83
+.model bigNode
+.inputs i0 i3 n74 n76 
+.outputs n83
+.names i3 n74 n80
+11 1
+.names i3 n76 n81
+01 1
+.names n80 n81 n82
+00 1
+.names i0 n82 n83
+00 1
+.end
+
+*****************************************
+node: n84
+.model bigNode
+.inputs i0 i3 i4 i5 
+.outputs n84
+.names i4 i5 n74
+01 1
+.names i3 n74 n75
+01 1
+.names i4 i5 n76
+10 1
+.names i3 n76 n77
+11 1
+.names n75 n77 n78
+00 1
+.names i0 n78 n79
+10 1
+.names i3 n74 n80
+11 1
+.names i3 n76 n81
+01 1
+.names n80 n81 n82
+00 1
+.names i0 n82 n83
+00 1
+.names n79 n83 n84
+00 1
+.end
+
+*****************************************
+node: n85
+.model bigNode
+.inputs i0 i2 i3 i4 i5 
+.outputs n85
+.names i4 i5 n74
+01 1
+.names i3 n74 n75
+01 1
+.names i4 i5 n76
+10 1
+.names i3 n76 n77
+11 1
+.names n75 n77 n78
+00 1
+.names i0 n78 n79
+10 1
+.names i3 n74 n80
+11 1
+.names i3 n76 n81
+01 1
+.names n80 n81 n82
+00 1
+.names i0 n82 n83
+00 1
+.names n79 n83 n84
+00 1
+.names i2 n84 n85
+10 1
+.end
+
+*****************************************
+node: n87
+.model bigNode
+.inputs i3 i5 n16 
+.outputs n87
+.names i3 i5 n86
+11 1
+.names n16 n86 n87
+00 1
+.end
+
+*****************************************
+node: n88
+.model bigNode
+.inputs i2 i3 i5 n16 
+.outputs n88
+.names i3 i5 n86
+11 1
+.names n16 n86 n87
+00 1
+.names i2 n87 n88
+00 1
+.end
+
+*****************************************
+node: n89
+.model bigNode
+.inputs i0 i2 i3 i5 n16 
+.outputs n89
+.names i3 i5 n86
+11 1
+.names n16 n86 n87
+00 1
+.names i2 n87 n88
+00 1
+.names i0 n88 n89
+01 1
+.end
+
+*****************************************
+node: n95
+.model bigNode
+.inputs i0 n58 n68 n93 
+.outputs n95
+.names i0 n58 n92
+01 1
+.names n68 n93 n94
+11 1
+.names n92 n94 n95
+00 1
+.end
+
+*****************************************
+node: n96
+.model bigNode
+.inputs i0 i5 n58 n68 n93 
+.outputs n96
+.names i0 n58 n92
+01 1
+.names n68 n93 n94
+11 1
+.names n92 n94 n95
+00 1
+.names i5 n95 n96
+10 1
+.end
+
+*****************************************
+node: n106
+.model bigNode
+.inputs i2 n68 n103 
+.outputs n106
+.names i2 n103 n104
+01 1
+.names i2 n68 n105
+11 1
+.names n104 n105 n106
+00 1
+.end
+
+*****************************************
+node: n107
+.model bigNode
+.inputs i0 i2 n68 n103 
+.outputs n107
+.names i2 n103 n104
+01 1
+.names i2 n68 n105
+11 1
+.names n104 n105 n106
+00 1
+.names i0 n106 n107
+10 1
+.end
+
+*****************************************
+node: n112
+.model bigNode
+.inputs i2 n108 n110 
+.outputs n112
+.names i2 n108 n109
+01 1
+.names i2 n110 n111
+11 1
+.names n109 n111 n112
+00 1
+.end
+
+*****************************************
+node: n113
+.model bigNode
+.inputs i0 i2 n108 n110 
+.outputs n113
+.names i2 n108 n109
+01 1
+.names i2 n110 n111
+11 1
+.names n109 n111 n112
+00 1
+.names i0 n112 n113
+00 1
+.end
+
+*****************************************
+node: n118
+.model bigNode
+.inputs i2 i4 n108 
+.outputs n118
+.names i2 i4 n116
+00 1
+.names i2 n108 n117
+11 1
+.names n116 n117 n118
+00 1
+.end
+
+*****************************************
+node: n119
+.model bigNode
+.inputs i2 i4 i6 n108 
+.outputs n119
+.names i2 i4 n116
+00 1
+.names i2 n108 n117
+11 1
+.names n116 n117 n118
+00 1
+.names i6 n118 n119
+00 1
+.end
+
+*****************************************
+node: n120
+.model bigNode
+.inputs i0 i2 i4 i6 n108 
+.outputs n120
+.names i2 i4 n116
+00 1
+.names i2 n108 n117
+11 1
+.names n116 n117 n118
+00 1
+.names i6 n118 n119
+00 1
+.names i0 n119 n120
+11 1
+.end
+
+*****************************************
+node: n127
+.model bigNode
+.inputs i0 i7 n63 
+.outputs n127
+.names i7 n63 n126
+10 1
+.names i0 n126 n127
+11 1
+.end
+
+*****************************************
+node: n130
+.model bigNode
+.inputs i0 i2 i3 i7 
+.outputs n130
+.names i0 i2 n128
+01 1
+.names i3 i7 n129
+10 1
+.names n128 n129 n130
+11 1
+.end
+
+*****************************************
+node: n131
+.model bigNode
+.inputs i0 i2 i3 i7 n63 
+.outputs n131
+.names i7 n63 n126
+10 1
+.names i0 n126 n127
+11 1
+.names i0 i2 n128
+01 1
+.names i3 i7 n129
+10 1
+.names n128 n129 n130
+11 1
+.names n127 n130 n131
+00 1
+.end
+
+*****************************************
+node: n134
+.model bigNode
+.inputs i3 i4 i7 
+.outputs n134
+.names i4 i7 n133
+01 1
+.names i3 n133 n134
+11 1
+.end
+
+*****************************************
+node: n135
+.model bigNode
+.inputs i3 i4 i7 n93 
+.outputs n135
+.names i4 i7 n133
+01 1
+.names i3 n133 n134
+11 1
+.names n93 n134 n135
+11 1
+.end
+
+*****************************************
+node: n141
+.model bigNode
+.inputs i0 i4 n138 
+.outputs n141
+.names i0 n138 n139
+10 1
+.names i0 i4 n140
+00 1
+.names n139 n140 n141
+00 1
+.end
+
+*****************************************
+node: n142
+.model bigNode
+.inputs i0 i4 i7 n138 
+.outputs n142
+.names i0 n138 n139
+10 1
+.names i0 i4 n140
+00 1
+.names n139 n140 n141
+00 1
+.names i7 n141 n142
+10 1
+.end
+
+*****************************************
+node: n143
+.model bigNode
+.inputs i0 i4 i6 i7 n138 
+.outputs n143
+.names i0 n138 n139
+10 1
+.names i0 i4 n140
+00 1
+.names n139 n140 n141
+00 1
+.names i7 n141 n142
+10 1
+.names i6 n142 n143
+01 1
+.end
+
+*****************************************
+node: n146
+.model bigNode
+.inputs i4 n11 n144 
+.outputs n146
+.names i4 n11 n145
+11 1
+.names n144 n145 n146
+11 1
+.end
+
+*****************************************
+node: n151
+.model bigNode
+.inputs i0 i5 n11 n110 
+.outputs n151
+.names i0 n110 n149
+11 1
+.names i5 n11 n150
+11 1
+.names n149 n150 n151
+11 1
+.end
+
+*****************************************
+node: n157
+.model bigNode
+.inputs i3 i4 i6 
+.outputs n157
+.names i4 i6 n156
+10 1
+.names i3 n156 n157
+11 1
+.end
+
+*****************************************
+node: n158
+.model bigNode
+.inputs i3 i4 i6 n154 
+.outputs n158
+.names i3 n154 n155
+01 1
+.names i4 i6 n156
+10 1
+.names i3 n156 n157
+11 1
+.names n155 n157 n158
+00 1
+.end
+
+*****************************************
+node: n159
+.model bigNode
+.inputs i0 i3 i4 i6 n154 
+.outputs n159
+.names i3 n154 n155
+01 1
+.names i4 i6 n156
+10 1
+.names i3 n156 n157
+11 1
+.names n155 n157 n158
+00 1
+.names i0 n158 n159
+10 1
+.end
+
+*****************************************
+node: n172
+.model bigNode
+.inputs i3 n100 n101 
+.outputs n172
+.names i3 n100 n170
+11 1
+.names i3 n101 n171
+01 1
+.names n170 n171 n172
+00 1
+.end
+
+*****************************************
+node: n173
+.model bigNode
+.inputs i2 i3 n100 n101 
+.outputs n173
+.names i3 n100 n170
+11 1
+.names i3 n101 n171
+01 1
+.names n170 n171 n172
+00 1
+.names i2 n172 n173
+00 1
+.end
+
+*****************************************
+node: n175
+.model bigNode
+.inputs i2 i3 n101 
+.outputs n175
+.names i2 i3 n174
+11 1
+.names n101 n174 n175
+11 1
+.end
+
+*****************************************
+node: n176
+.model bigNode
+.inputs i2 i3 n100 n101 
+.outputs n176
+.names i3 n100 n170
+11 1
+.names i3 n101 n171
+01 1
+.names n170 n171 n172
+00 1
+.names i2 n172 n173
+00 1
+.names i2 i3 n174
+11 1
+.names n101 n174 n175
+11 1
+.names n173 n175 n176
+00 1
+.end
+
+*****************************************
+node: n177
+.model bigNode
+.inputs i2 i3 i4 n100 n101 
+.outputs n177
+.names i3 n100 n170
+11 1
+.names i3 n101 n171
+01 1
+.names n170 n171 n172
+00 1
+.names i2 n172 n173
+00 1
+.names i2 i3 n174
+11 1
+.names n101 n174 n175
+11 1
+.names n173 n175 n176
+00 1
+.names i4 n176 n177
+00 1
+.end
+
+*****************************************
+node: n179
+.model bigNode
+.inputs i3 i5 
+.outputs n179
+.names i3 i5 n178
+00 1
+.names i3 n178 n179
+00 1
+.end
+
+*****************************************
+node: n180
+.model bigNode
+.inputs i3 i5 i7 
+.outputs n180
+.names i3 i5 n178
+00 1
+.names i3 n178 n179
+00 1
+.names i7 n179 n180
+10 1
+.end
+
+*****************************************
+node: n181
+.model bigNode
+.inputs i3 i4 i5 i7 
+.outputs n181
+.names i3 i5 n178
+00 1
+.names i3 n178 n179
+00 1
+.names i7 n179 n180
+10 1
+.names i4 n180 n181
+11 1
+.end
+
+*****************************************
+node: n182
+.model bigNode
+.inputs i2 i3 i4 i5 i7 
+.outputs n182
+.names i3 i5 n178
+00 1
+.names i3 n178 n179
+00 1
+.names i7 n179 n180
+10 1
+.names i4 n180 n181
+11 1
+.names i2 n181 n182
+11 1
+.end
+
+*****************************************
+node: n187
+.model bigNode
+.inputs i0 i4 n62 n101 
+.outputs n187
+.names i0 n62 n185
+01 1
+.names i4 n101 n186
+11 1
+.names n185 n186 n187
+11 1
+.end
+
+*****************************************
+node: n190
+.model bigNode
+.inputs i4 i6 n160 
+.outputs n190
+.names i4 i6 n189
+11 1
+.names n160 n189 n190
+00 1
+.end
+
+*****************************************
+node: n191
+.model bigNode
+.inputs i0 i4 i6 n160 
+.outputs n191
+.names i4 i6 n189
+11 1
+.names n160 n189 n190
+00 1
+.names i0 n190 n191
+10 1
+.end
+
+*****************************************
+node: n193
+.model bigNode
+.inputs i0 i4 i6 n160 
+.outputs n193
+.names i4 i6 n189
+11 1
+.names n160 n189 n190
+00 1
+.names i0 n190 n191
+10 1
+.names i0 i6 n192
+00 1
+.names n191 n192 n193
+00 1
+.end
+
+*****************************************
+node: n194
+.model bigNode
+.inputs i0 i3 i4 i6 n160 
+.outputs n194
+.names i4 i6 n189
+11 1
+.names n160 n189 n190
+00 1
+.names i0 n190 n191
+10 1
+.names i0 i6 n192
+00 1
+.names n191 n192 n193
+00 1
+.names i3 n193 n194
+00 1
+.end
+
+*****************************************
+node: n200
+.model bigNode
+.inputs i4 n59 n124 
+.outputs n200
+.names i4 n124 n199
+11 1
+.names n59 n199 n200
+11 1
+.end
+
+*****************************************
+node: n204
+.model bigNode
+.inputs i0 n123 n125 
+.outputs n204
+.names i0 n125 n202
+10 1
+.names i0 n123 n203
+01 1
+.names n202 n203 n204
+00 1
+.end
+
+*****************************************
+node: n205
+.model bigNode
+.inputs i0 i4 n123 n125 
+.outputs n205
+.names i0 n125 n202
+10 1
+.names i0 n123 n203
+01 1
+.names n202 n203 n204
+00 1
+.names i4 n204 n205
+10 1
+.end
+
+*****************************************
+node: n206
+.model bigNode
+.inputs i0 i3 i4 n123 n125 
+.outputs n206
+.names i0 n125 n202
+10 1
+.names i0 n123 n203
+01 1
+.names n202 n203 n204
+00 1
+.names i4 n204 n205
+10 1
+.names i3 n205 n206
+11 1
+.end
+
+*****************************************
+node: n208
+.model bigNode
+.inputs i4 n124 n144 
+.outputs n208
+.names i4 n124 n207
+01 1
+.names n144 n207 n208
+11 1
+.end
+
+*****************************************
+node: n212
+.model bigNode
+.inputs i6 i7 n138 
+.outputs n212
+.names i7 n138 n211
+00 1
+.names i6 n211 n212
+11 1
+.end
+
+*****************************************
+node: n213
+.model bigNode
+.inputs i5 i6 i7 n138 
+.outputs n213
+.names i7 n138 n211
+00 1
+.names i6 n211 n212
+11 1
+.names i5 n212 n213
+11 1
+.end
+
+*****************************************
+node: n214
+.model bigNode
+.inputs i0 i5 i6 i7 n138 
+.outputs n214
+.names i7 n138 n211
+00 1
+.names i6 n211 n212
+11 1
+.names i5 n212 n213
+11 1
+.names i0 n213 n214
+11 1
+.end
+
+*****************************************
+node: n218
+.model bigNode
+.inputs i3 i4 n10 
+.outputs n218
+.names i4 n10 n217
+01 1
+.names i3 n217 n218
+01 1
+.end
+
+*****************************************
+node: n219
+.model bigNode
+.inputs i2 i3 i4 n10 
+.outputs n219
+.names i4 n10 n217
+01 1
+.names i3 n217 n218
+01 1
+.names i2 n218 n219
+11 1
+.end
+
+*****************************************
+node: n220
+.model bigNode
+.inputs i0 i2 i3 i4 n10 
+.outputs n220
+.names i4 n10 n217
+01 1
+.names i3 n217 n218
+01 1
+.names i2 n218 n219
+11 1
+.names i0 n219 n220
+11 1
+.end

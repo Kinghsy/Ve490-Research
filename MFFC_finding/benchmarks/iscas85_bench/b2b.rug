@@ -1,0 +1,32 @@
+read_bench c880.bench
+strash
+write_blif c880.blif
+
+read_bench c1355.bench
+strash
+write_blif c1355.blif
+
+read_bench c1908.bench
+strash
+write_blif c1908.blif
+
+read_bench c2670.bench
+strash
+write_blif c2670.blif
+
+read_bench c3540.bench
+strash
+write_blif c3540.blif
+
+read_bench c5315.bench
+strash
+write_blif c5315.blif
+
+read_bench c6288.bench
+strash
+write_blif c6288.blif
+
+read_bench c7552.bench
+strash
+write_blif c7552.blif
+

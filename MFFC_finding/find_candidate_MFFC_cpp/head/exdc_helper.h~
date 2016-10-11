@@ -1,0 +1,55 @@
+#ifndef EXDC_HELPER_H
+#define EXDC_HELPER_H
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <climits>
+#include <vector>
+#include <set>
+#include <map>
+#include <iostream>
+#include "../cudd/bnet.h"
+
+using namespace std; 
+
+int measure_dist(string cube, string sexdc);
+
+int get_save(BnetNetwork *net, char *cnode, multimap<double, string> &exdc_set, int iIndex);
+
+int get_save_new(BnetNetwork *net, char *cnode, vector<string> &sim_org_pla, vector<string> &final_org_pla, int iIndex);
+
+void exp_cube(string &org_cube, vector<string> &exp_cubes);
+
+void insert_lit(string &str, set<int> &pos_x, string &new_str);
+
+int isConflict(string &cube1, string &cube2);
+
+void find_cover_cubes(string &minterm, int num_input, vector<string> &MSEOP);
+
+void minus_minterm(string &org_cube, string &minterm, vector<string> &new_minterms);
+
+void minus_cubes(vector<string> &org_cubes, vector<string> &mcubes, vector<string> &dont_care, vector<string> &local_dc_set, vector<string> &new_minterms);
+
+void get_exp_cube_helper(string &cpi, string &ccube, vector<string> &exp_cubes);
+
+void get_exp_cube(string &cpi, string &ccube, vector<string> &exp_cubes);
+
+void intersect(string &pi1, string &pi2, string &inter_cube);
+
+void find_unique_minterm_exdc(vector<string> &org_pla, vector<string> &dont_care, vector<string> &local_dc_set, vector<string> &exp_cubes, vector<string> &exdc_cubes, int flag_type);
+
+void find_unique_minterm_one(multimap<int, string> &sorted_pla, string &cube, string &unique_minterm);
+
+void find_unique_minterms(multimap<int, string> &sorted_pla, vector<string> &unique_minterms);
+
+void find_adj_minterms(string &cube, vector<string> &adj_set);
+
+void find_cand_reduce(BnetNetwork *net, DdManager **dd, char *cnode, vector<string> &org_pla, vector<char*> &unsort_cutnodes, vector<string> &dont_care,  vector<string> &local_dc_set, struct score_pla &this_sp, string &ccube, int num_input, double threshold, int iIndex);
+
+void find_cand_exp(BnetNetwork *net, DdManager **dd, char *cnode, vector<string> &org_pla, vector<char*> &unsort_cutnodes, vector<string> &dont_care,  vector<string> &local_dc_set, struct score_pla &this_sp, string &ccube, double threshold, int iIndex);
+
+void sim_with_exdc(BnetNetwork *net, char *cnode, multimap<double, string> &exdc_set);
+
+#endif

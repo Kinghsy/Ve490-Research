@@ -1,0 +1,10 @@
+source abc.rc
+read_genlib mcnc_only2inputGates.genlib
+read_truth -x 10100111010111110000110011011100     
+strash
+resyn2
+map
+write_verilog output2.v
+write_bench -l output2.bench
+
+

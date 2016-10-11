@@ -1,0 +1,34 @@
+#ifndef NODE_H
+#define NODE_H
+#include <vector>
+#include <iostream>
+using namespace std;
+class Edge;
+
+struct Gate
+{
+	int type;// the type of gate, 0 means PO or PI
+	double p;
+	double rp;// The probability of the gate's output being 1 
+};
+class Node
+{
+	public:	
+	int index; // The index of the node 
+	int level;
+	Gate gate;
+	bool explored; //Indicate if the node is explored
+	bool ifcross;
+	bool visit;
+	bool isInput;
+	bool isOutput;
+	vector<string> cubes;
+	map<int, Node*> MFFC;
+	map<int, Node*> TFI;
+	vector<Edge*> outedges;
+	vector<Edge*> inedges;
+	Node();
+	Node(int index);
+};
+
+#endif

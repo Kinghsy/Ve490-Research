@@ -1,0 +1,34 @@
+clear all;
+clc;
+
+%========================================================================
+%               input part
+binaryTree_node_root = binaryTree_node_class;
+var_id_vec = [1,2,3,4,5,6];
+is_root = 1;
+
+binaryTree_node_root = init_binaryTree_node(binaryTree_node_root,var_id_vec,is_root);
+
+% input one "binaryTree_node_root" as the root of a binary tree sturcture,
+% only the var_id_vec at each level is assigned here
+binaryTree_node_root = build_binaryTree_helper(binaryTree_node_root);
+
+% given the truth table
+truthTable_obj = truthTable_class;
+f_vec = [1 0 1 0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 0 1 1 0 1 1];
+%f_vec = [1 1 0 1 0 0 1 0 1 1 1 1 0 0 0 1];
+f_vec_original = f_vec;
+truthTable_obj = init_truthTable(truthTable_obj, var_id_vec, f_vec);
+
+%========================================================================
+
+error_rate = approximate_one_truthTable__main(binaryTree_node_root,truthTable_obj)
+
+
+
+
+
+
+
+
+

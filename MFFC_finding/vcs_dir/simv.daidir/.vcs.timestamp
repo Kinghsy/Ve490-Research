@@ -1,0 +1,72 @@
+0 
+22
++v2k
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -O -I/home/wangchen/synopsys/vcs/E-2011.03/include
+-Mcmodrun=
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mldflags=-melf_i386
+-Mobjects= /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/libvirsim.so /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/librterrorinf.so /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/home/wangchen/synopsys/vcs/E-2011.03/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/home/wangchen/synopsys/vcs/E-2011.03/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-cm_xmldb
+-gen_obj
+./input_dir/ckt_org.v
+./input_dir/ckt_sim.v
+./input_dir/ckt_tb.v
+/home/wangchen/synopsys/vcs/E-2011.03/linux/bin/vcs1
+36
+XMODIFIERS=@im=none
+XAUTHORITY=/tmp/.gdm23EKDY
+VMR_MODE_FLAG=32
+VCS_HOME=/home/wangchen/synopsys/vcs/E-2011.03
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+USERNAME=wangchen
+UNAME=/bin/uname
+TOOL_HOME=/home/wangchen/synopsys/vcs/E-2011.03/linux
+SYNOPSYS=/home/wangchen/synopsys
+SSH_AUTH_SOCK=/tmp/ssh-KfUKlp4247/agent.4247
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=4283
+SNPSLMD_LICENSE_FILE=27000@mylinux:/home/wangchen/synopsys/vcs/E-2011.03/flexlm//license.dat
+SESSION_MANAGER=local/mylinux:/tmp/.ICE-unix/4247
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+OVA_UUM=0
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+INPUTRC=/etc/inputrc
+HOSTNAME=mylinux
+G_BROKEN_FILENAMES=1
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/wangchen/.gtkrc-1.2-gnome2
+GNOME_KEYRING_SOCKET=/tmp/keyring-gAqO8g/socket
+GNOME_DESKTOP_SESSION_ID=Default
+GDM_XSERVER_LOCATION=local
+GDMSESSION=default
+DVE_HOME=/home/wangchen/synopsys/vcs/E-2011.03/gui/dve
+DESKTOP_STARTUP_ID=
+DESKTOP_SESSION=default
+DC_HOME=/home/wangchen/synopsys/DC/B-2008.09
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FFj2WPcTCo,guid=5ebf967f1dea721ad1299e0056dec176
+CVS_RSH=ssh
+COLORTERM=gnome-terminal
+0
+3
+1457349961 ./input_dir/ckt_tb.v
+1457439414 ./input_dir/ckt_sim.v
+1457439425 ./input_dir/ckt_org.v
+4
+0 
+1298523739 /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/libvirsim.so
+1298523341 /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/librterrorinf.so
+1298523301 /home/wangchen/synopsys/vcs/E-2011.03/linux/lib/libsnpsmalloc.so
+1457439474 simv.daidir

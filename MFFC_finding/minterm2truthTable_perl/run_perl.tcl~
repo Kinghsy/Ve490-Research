@@ -1,0 +1,1 @@
+perl minterms2truthTable_parser inputs/output.txt outputs/output_new_tt.txt
